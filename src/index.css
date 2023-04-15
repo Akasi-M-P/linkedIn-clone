@@ -22,3 +22,22 @@ div, h1, h2, h3, h4, h5, h6, header, html, i, img, label, li, nav, p, small, spa
 body {
   font-family: Arial, sans-serif;
 }
+
+.icons {
+  display: flex;
+  margin-left: 28.5rem;
+  border-right: 0.5px solid rgb(148, 146, 146);
+  
+  
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+  .icons {
+    visibility: hidden;
+    margin-left: 0;
+  }
+  
+}
+
