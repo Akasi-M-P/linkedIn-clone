@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import LoginForm from "./LogInForm";
 
 const Login = (props) => {
   return (
@@ -36,7 +36,19 @@ const Login = (props) => {
       <Section>
         <Hero>
           <h1>Welcome to your professional community</h1>
-          <img src="/images/hero.svg" alt="" />
+
+          <Form>
+            <LoginForm />
+            <Google>
+              <img src="/images/google_icon-icons.com_62736.svg" alt="" />
+              Continue with Google
+            </Google>
+            <Google>
+              <img src="/images/google_icon-icons.com_62736.svg" alt="" />
+              Continue with Google
+            </Google>
+          </Form>
+          <img id="hero-image" src="/images/hero.svg" alt="" />
         </Hero>
       </Section>
     </Container>
@@ -158,7 +170,7 @@ const Section = styled.section`
 
   @media (max-width: 768px) {
     margin: 0;
-    min-height: 0px;
+    min-height: 560px;
     overflow: hidden;
   }
 `;
@@ -168,7 +180,7 @@ const Hero = styled.div`
   h1 {
    
     padding-bottom: 0;
-    width: 55%;
+    width: 50%;
     color: #8f5849;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
       Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
@@ -185,18 +197,18 @@ const Hero = styled.div`
       font-size: 56px;
       font-weight: 200;
       text-align: left;
-      z-index: 1;
+      // z-index: 1;
     }
   }
 
-  img {
+  #hero-image {
     display: block;
     width: 700px;
     height: 670px;
     position: relative;
     bottom: -2px;
     right: -38rem;
-     top: -130px;
+     top: -470px;
     
     
 
@@ -250,6 +262,41 @@ const Icon = styled.a`
   }
 
   
+`;
+
+const Form = styled.div`
+  width: 50%;
+  margin-top: 10px;
+  width: 408px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+`;
+
+const Google = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 2rem;
+  border: 1px solid #cacfcc;
+
+  vertical-align: middle;
+  z-index: 0;
+  transition-duration: 167ms;
+  &:hover {
+    background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+  }
 `;
 
 
