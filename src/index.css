@@ -4,7 +4,6 @@ body {
 }
 
 :root, body, html {
-  background-color: #f5f5f5;
   box-sizing: border-box;
 }
 
@@ -34,18 +33,16 @@ body {
 
 
 
+
 form {
   display: flex;
   flex-direction: column;
   top: 1rem;
-  /* margin: 0 auto; */
-  /* padding: 20px; */
-  /* border: 1px solid #ccc; */
   border-radius: 5px;
+  padding: 20px;
 }
 
 label {
-  font-weight: bold;
   margin-bottom: 5px;
 }
 
@@ -84,6 +81,114 @@ button[type="button"]:hover {
   color: #0062cc;
 }
 
+/* New CSS for the password input */
+input[type="password"] {
+  width: 100%;
+}
+
+.password-toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.password-toggle-container label {
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.password-toggle-container input {
+  margin-right: 10px;
+}
+
+/* .showing-password {
+  
+} */
+
+
+.forgot {
+  text-align: left;
+  padding-left: 0;
+}
+
+
+.horizontal-line {
+    border-top: 1px solid #000;
+    text-align: center;
+    line-height: 0.1em;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .horizontal-line span {
+    background-color: #fff;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .explore-topics {
+    width: 40%;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.9);
+}
+  
+
+.current-topics {
+  width: 60%;
+  margin-left: 5rem;
+}
+
+.current-topics h1 {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 24px;
+}
+
+.current-topics li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  margin: 5px 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.current-topics li:hover {
+  background-color: #f2f2f2;
+}
+
+.current-topics a {
+  color: #696565;
+  text-decoration: none;
+  height: min-content;
+  min-height: 48px;
+  border-radius: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.more-topics {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 10px;
+   
+   
+}
 
 
 @media only screen and (max-width: 768px) {

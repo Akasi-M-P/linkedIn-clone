@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,9 +14,13 @@ const LoginForm = () => {
     // Here you can implement the logic to handle the forgot password functionality
   };
 
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="email">Email</label>
+      <label htmlFor="email">Email or phone</label>
       <input
         type="email"
         id="email"
@@ -24,14 +29,27 @@ const LoginForm = () => {
         required
       />
       <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="button" onClick={handleForgotPassword}>
+      <div style={{ display: "flex" }}>
+        <input
+          type={showPassword ? "text" : "password"}
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          style={{ marginRight: "10px" }}
+        />
+        <label>
+          <input
+            className="showing-password"
+            type="checkbox"
+            onClick={toggleShowPassword}
+            style={{ marginRight: "5px" }}
+          />
+          Show
+        </label>
+      </div>
+
+      <button className="forgot" type="button" onClick={handleForgotPassword}>
         Forgot password
       </button>
       <button type="submit">Sign in</button>

@@ -1,7 +1,10 @@
 import styled from "styled-components"
 import LoginForm from "./LogInForm";
+import List from "./List";
 
 const Login = (props) => {
+  const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+  const maxItems = 3;
   return (
     <Container>
       <Nav>
@@ -39,18 +42,56 @@ const Login = (props) => {
 
           <Form>
             <LoginForm />
+            <div class="horizontal-line">
+              <span class="or">or</span>
+            </div>
             <Google>
               <img src="/images/google_icon-icons.com_62736.svg" alt="" />
               Continue with Google
             </Google>
-            <Google>
-              <img src="/images/google_icon-icons.com_62736.svg" alt="" />
-              Continue with Google
-            </Google>
+
+            <Google>New to LinkedIn? Join now</Google>
           </Form>
           <img id="hero-image" src="/images/hero.svg" alt="" />
         </Hero>
       </Section>
+      <Topics>
+        <div className="explore-topics">
+          <p>Explore topics you are interested in</p>
+          <List items={items} maxItems={maxItems} />
+        </div>
+        <div className="current-topics">
+          <h1>content topics</h1>
+          <div>
+            <ul className="more-topics">
+              <li>
+                <a href="">See All Topics</a>{" "}
+              </li>
+              <li>
+                <a href="">Workplace</a>
+              </li>
+              <li>
+                <a href="">Job Search</a>
+              </li>
+              <li>
+                <a href="">Careers</a>
+              </li>
+              <li>
+                <a href="">Interview</a>
+              </li>
+              <li>
+                <a href="">Salary and Compensation</a>
+              </li>
+              <li>
+                <a href="">Internships</a>
+              </li>
+              <li>
+                <a href="">Employee Benefits</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Topics>
     </Container>
   );
 };
@@ -158,7 +199,7 @@ const SignIn = styled.a`
 const Section = styled.section`
   display: flex;
   align-items: start;
-  min-height: 700px;
+  height: 40vh;
   padding-bottom: 138px;
   padding-top: 20px;
   padding: 60px 0;
@@ -177,6 +218,9 @@ const Section = styled.section`
 
 const Hero = styled.div`
   width: 100%;
+  height: 50vh;
+  margin-top: 0;
+  
   h1 {
    
     padding-bottom: 0;
@@ -204,7 +248,7 @@ const Hero = styled.div`
   #hero-image {
     display: block;
     width: 700px;
-    height: 670px;
+    height: 500px;
     position: relative;
     bottom: -2px;
     right: -38rem;
@@ -299,14 +343,16 @@ const Google = styled.button`
   }
 `;
 
+const Topics = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20rem;
+  width: 71.9%;
+  display: flex;
+`;
+
+export default Login;
 
 
-export default Login
 
 
-
-
-// @media (max-width: 768px) {
-    
-//     display: hidden;
-//   }
